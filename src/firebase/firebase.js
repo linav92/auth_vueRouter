@@ -64,18 +64,17 @@ const logout = () => {
 const observador = (to, next) => {
   onAuthStateChanged(auth, (user) => {
     if (user) {
-      // Aca entra cuando esta logeado
+      
       if (to.path === "/login") {
-        next("/"); //redirige
+        next("/"); 
       } else {
-        next(); //Entra (en este caso al HOME)
+        next();
       }
-    } else {
-      // Aca cuando no
+    } else  {
       if (to.path !== "/login") {
         next("/login");
       } else {
-        next(); // En este caso entra al login
+        next(); 
       }
     }
   });

@@ -84,7 +84,7 @@ export default {
           this.msg2 = "El email es incorrecto";
           break;
         case "auth/wrong-password":
-          this.msg = "La contraseña es incorrecta";
+          this.msg2 = "La contraseña es incorrecta";
           break;
        
       }
